@@ -49,11 +49,11 @@ $("#googleBtn").on("click", function (event) {
 
 
 
-//       firebase.auth().onAuthStateChanged(user => {
-//         if(user) {
-//           window.location = 'landing.html'; //After successful login, user will be redirected to home.html
-//         }
-//       });
+      firebase.auth().onAuthStateChanged(user => {
+        if(user) {
+          window.location = 'landing.html'; //After successful login, user will be redirected to home.html
+        }
+      });
 
 
  });
