@@ -1,31 +1,25 @@
-
-
-
 //updating profile info to firebase
 $("#update-btn").on("click", function (event) {
     event.preventDefault();
 
 
-// //get firebase crap all sorted out
-var config = {
-    apiKey: "AIzaSyD9zUxSiYvAJ5aS_EhGLIx_MWILBbJy4TY",
-    authDomain: "project-1-530e9.firebaseapp.com",
-    databaseURL: "https://project-1-530e9.firebaseio.com",
-    projectId: "project-1-530e9",
-    storageBucket: "project-1-530e9.appspot.com",
-    messagingSenderId: "441047690869"
-};
-//start firebase
+    // //get firebase crap all sorted out
+    var config = {
+        apiKey: "AIzaSyD9zUxSiYvAJ5aS_EhGLIx_MWILBbJy4TY",
+        authDomain: "project-1-530e9.firebaseapp.com",
+        databaseURL: "https://project-1-530e9.firebaseio.com",
+        projectId: "project-1-530e9",
+        storageBucket: "project-1-530e9.appspot.com",
+        messagingSenderId: "441047690869"
+    };
+    //start firebase
 
-var database = firebase.database();
-firebase.initializeApp(config);
-
-
-
-
+    var database = firebase.database();
+   
+    firebase.initializeApp(config);
 
     console.log("Profile button was clicked");
-    
+
     var firstName = $("#fn-input").val();
     var lastName = $("#ln-input").val();
     var branch = $("#branch-input").val();
@@ -42,12 +36,12 @@ firebase.initializeApp(config);
         hobbies: hobbies,
         uid: user.uid
     };
-     database.ref("/userProfiles").push(newProfile);
+    database.ref("/userProfiles").push(newProfile);
 });
- database.ref("/userProfiles").on("child_added", function (childSnapshot, prevChildKey) {
+database.ref("/userProfiles").on("child_added", function (childSnapshot, prevChildKey) {
     //if (childSnapshot.val().uid === result.user.uid) {
     console.log(childSnapshot.val());
-    
+
     // Store everything into a variable.    
     var firstName = childSnapshot.val().firstname;
     var lastName = childSnapshot.val().lastname;
@@ -55,5 +49,5 @@ firebase.initializeApp(config);
     var rank = childSnapshot.val().rank;
     var zip = childSnapshot.val().zipcode;
     var hobbies = childSnapshot.val().hobbies;
-   
+
 });
