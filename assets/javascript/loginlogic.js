@@ -31,6 +31,10 @@ $("#googleBtn").on("click", function (event) {
         user = result.user;
         console.log(user.displayName + " is signed in.");
         console.log(user);
+
+        localStorage.clear();
+        localStorage.setItem("name", user.displayName);
+
         // ...
       }).catch(function(error) {
         // Handle Errors here.
@@ -43,19 +47,12 @@ $("#googleBtn").on("click", function (event) {
         // ...
       });
 
-      firebase.auth().onAuthStateChanged(user => {
-        if(user) {
-          window.location = 'landing.html'; //After successful login, user will be redirected to home.html
-        }
-      });
+//       firebase.auth().onAuthStateChanged(user => {
+//         if(user) {
+//           window.location = 'landing.html'; //After successful login, user will be redirected to home.html
+//         }
+//       });
 
 
-});
+// });
 
-$("#logOutBtn").on("click", function (event) {
-    firebase.auth().signOut().then(function () {
-        console.log("User has signed out");
-    }).catch(function (error) {
-        // An error happened.
-    });
-});

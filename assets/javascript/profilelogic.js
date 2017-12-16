@@ -1,4 +1,12 @@
-//get firebase crap all sorted out
+
+
+
+//updating profile info to firebase
+$("#update-btn").on("click", function (event) {
+    event.preventDefault();
+
+
+// //get firebase crap all sorted out
 var config = {
     apiKey: "AIzaSyD9zUxSiYvAJ5aS_EhGLIx_MWILBbJy4TY",
     authDomain: "project-1-530e9.firebaseapp.com",
@@ -8,15 +16,13 @@ var config = {
     messagingSenderId: "441047690869"
 };
 //start firebase
-firebase.initializeApp(config);
 
 var database = firebase.database();
+firebase.initializeApp(config);
 
 
 
-//updating profile info to firebase
-$("#update-btn").on("click", function (event) {
-    event.preventDefault();
+
 
     console.log("Profile button was clicked");
     

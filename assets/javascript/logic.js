@@ -5,7 +5,7 @@ $(document).ready(function(){
 // This is for the Parallax effect
   $('.parallax').parallax();
   // signout function
-  $("#logOutBtn").on("click", function (event) {
+  $("#signOutBtn").on("click", function (event) {
     firebase.auth().signOut().then(function () {
         console.log("User has signed out");
     }).catch(function (error) {
