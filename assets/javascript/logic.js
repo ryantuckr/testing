@@ -1,3 +1,4 @@
+$("#userId").text(localStorage.getItem("name"));
 
 
 $(document).ready(function(){
