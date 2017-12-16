@@ -1,0 +1,93 @@
+body {
+    font-family: 'Alegreya', serif;
+    font-size: 24px;
+
+}
+.nav-wrapper {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(darkgrey), black);
+    background-image: -webkit-linear-gradient(top, darkgrey, black);
+    background-image: -moz-linear-gradient(top, darkgrey, black);
+    background-image: linear-gradient(to bottom, darkgrey, black);
+}
+
+.nav-content {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(black), to(darkgrey));
+    background-image: -webkit-linear-gradient(top, black, (darkgrey));
+    background-image: -moz-linear-gradient(top, black, (darkgrey));
+    background-image: linear-gradient(to bottom, black, (darkgrey));
+}
+
+.tab {
+    color: black;
+}
+
+
+/* .parallax-container {
+    height: 1000px;
+} */
+
+.container {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+/* .container .row {
+    margin: 0 auto;
+} */
+
+#loginBody {
+    background-image: url("../images/loginimg.jpg");
+    background-size: 1920px;
+}
+#indexBody {
+    background-image: url("../images/indeximg.jpg");
+    background-size: 1920px;
+    
+}
+.btn{
+    background-color: #283439;
+}
+#loginCard {
+    margin-left: 510px;
+    background-image: linear-gradient(black, darkgrey,black);
+}
+.card-content{
+    background-image: linear-gradient(black, darkgrey);
+}
+.card-action {
+    background-image: linear-gradient(darkgrey,black);
+}
+.waves-effect {
+    background-image: linear-gradient(darkgrey,black);
+}
+.card-panel{
+    background-image: linear-gradient(black, darkgrey,black);
+    
+}
+/* #sectionWhite {
+    background:red;
+} */
+
+ .nav-wrapper {
+
+   height:100px !important;
+}
+
+/* .parallax-container{
+    height: 1200px;
+    background-color: red;
+} */
+.sectionWhite {
+    background-color: cornflowerblue !important;
+    
+}
+
+/* #profileBody{
+    background-image: url("../images/desk.jpg");
+    background-size:cover;
+} */
+
